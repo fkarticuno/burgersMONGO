@@ -1,0 +1,24 @@
+<h3>{{title}}</h3>
+
+<form action="/add" method="post">
+Name: <input type="text" name="name"><br>
+<input type="submit" value="Add">
+</form>
+
+
+<h2>Eaten</h2>
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{>burger-card isEaten=0}}
+    {{/if }}
+    {{/each}}
+</ul>
+<h2>Ready to Eat</h2>
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{>burger-card isEaten=1}}
+    {{/unless}}
+    {{/each}}
+</ul>

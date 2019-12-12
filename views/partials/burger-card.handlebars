@@ -1,0 +1,8 @@
+<li>
+    {{this.name}}
+    <form action="/change" method="post">
+        <input type="hidden" name="id" value="{{_id}}">
+        <input type="hidden" name="devoured" value="isEaten">
+        <input type="submit" value="X">
+    </form>
+</li>
